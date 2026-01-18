@@ -13,7 +13,7 @@ html:before {
 }
 
 .repeating-image-container {
-  background-image: url("../../Images/Under_Construction1.gif");
+  background-image: url("../assets/Images/Under_Construction1.gif");
   /* Replace with your image path */
   background-repeat: repeat-x;
   /* Repeat horizontally */
@@ -27,7 +27,7 @@ body {
 }
 
 body {
-  background-image: url("../../Backgrounds/Starry_Background.gif");
+  background-image: url("../assets/Backgrounds/Starry_Background.gif");
   font-family: "eb-garamond"
 }
 
@@ -144,4 +144,17 @@ p {
   body {
     font-family: 'Times New Roman', Times, serif
   }
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif
+}
+
+.logo {
+  object-fit: contain;
+}
+
+body {
+  background-image: url("../assets/Backgrounds/Starry_Background.gif");
+  font-family: "eb-garamond";
 }
