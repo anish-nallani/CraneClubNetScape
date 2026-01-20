@@ -1,0 +1,5 @@
+#webamp {
+  position: fixed !important;
+  z-index: 10000 !important;
+  top: 40% !important;
+}
