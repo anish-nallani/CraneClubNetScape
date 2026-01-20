@@ -11,9 +11,12 @@ import Webamp from 'webamp';
   styleUrl: './sidebar.css',
 })
 export class Sidebar implements AfterViewInit {
-  isOpen: boolean = false;
+  isOpen: boolean = true;
   ngAfterViewInit(): void {
-    this.initializeWebamp();
+    const query = window.matchMedia("(max-width: 700px)")
+    if (!query.matches) {
+      this.initializeWebamp();
+    }
   }
 
   initializeWebamp(): void {

@@ -12,7 +12,7 @@ html:before {
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .sidebar-toggle {
     right: -40px;
     width: 40px;
