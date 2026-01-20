@@ -1,4 +1,4 @@
-import { OnInit } from '@angular/core';
+import { OnInit, ViewEncapsulation } from '@angular/core';
 import { AfterViewInit } from '@angular/core';
 import { Component } from '@angular/core';
 import Webamp from 'webamp';
@@ -9,6 +9,7 @@ import Webamp from 'webamp';
   imports: [],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class Sidebar implements AfterViewInit {
   isOpen: boolean = true;

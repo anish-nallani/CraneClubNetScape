@@ -5,24 +5,9 @@
   <title>CRANE CULT</title>
 </head>
 
-
-<body text="white" bgcolor="#000000" class="scrollbar" style="background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 50%);">
-
-  <app-sidebar id="sidebarThing" style="padding-left:0.5%" style="position:fixed; width:30%; height:102%; overflow:none; z-index: 1"></app-sidebar>
-  <script type="text/javascript">
-    function JavaBlink() {
-      var blinks = document.getElementsByTagName('JavaBlink');
-      for (var i = blinks.length1; i >= 0; i--) {
-        var s = blinks[i];
-        s.style.visibility = (s.style.visibility === 'visible') ? 'hidden' : 'visible';
-      }
-      window.setTimeout(JavaBlink, 1000);
-    }
-    if (document.addEventListener) document.addEventListener("DOMContentLoaded", JavaBlink, false);
-    else if (window.addEventListener) window.addEventListener("load", JavaBlink, false);
-    else if (window.attachEvent) window.attachEvent("onload", JavaBlink);
-    else window.onload = JavaBlink;
-  </script>
+<body text="white" bgcolor="#000000" class="scrollbar">
+  <app-sidebar id="sidebarThing"
+    style="position:fixed; width:275px; height:102%; overflow:none; z-index: 1; margin-top:-8px"></app-sidebar>
   <script>
     var space = " ";
     var speed = "60";
@@ -36,55 +21,61 @@
     }
     Scroll();
   </script>
-  <div style="width:100%; background-image: url('assets/Backgrounds/Starry_Background.gif');" align="center">
-    <div id="mainPageThing" style="background-color: rgba(0, 0, 0, 0.5); font-family: eb-garamond;"
-      align="center">
-      <hr align="center" size="2">
-      <marquee style="font-size:2vh; color:white">
+  <div id="mainContainer" style="background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)); position:relative;" align="center">
+    <div style="background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)); width:100%; max-width:1070px">
+        <div id="mainPageThing" align="center" style="background-color: rgba(0, 0, 0, 0.5); width:100%;">
+        <hr align="center" size="2">
+        <marquee style="font-size:2vh; color:white">
 
-        <strong>
-          <em> a crane a day keeps the doctors away &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            life's
-            too short not to fold cranes</em></strong>
-      </marquee>
+          <strong>
+            <em> a crane a day keeps the doctors away &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              life's
+              too short not to fold cranes</em></strong>
+        </marquee>
 
-      <hr align="center" size="2">
-
-
-      <div style="height:3vh; width:100%"></div>
-
-      <h1 style="color: white; font-size: 4vh"> <em> Welcome to Crane Club! </em></h1>
-
-      <div style="height:1vh; width:100%"></div>
-
-      <marquee behavior="alternative">
-        <font size="2vh" color="aqua">
-          <b>Student Center Room 009</b>
-        </font>
-        <b>
-          <font size="3vh" color="lightgreen"> Fridays 5-7 PM</font>
-          <font size="2vh" color="aqua"> !!</font>
-        </b>
-      </marquee>
-      <div style="height:1vh; width:100%"></div>
-
-      <h2 style="color: white">
-      </h2>
-
-      <hr size="4em">
-
-      <p style="font-size:1.2vh; padding-left:1vh;"> 
-        We are a student organization currently operating at Wayne State University that folds paper boxes and
-         cranes to donate to the University of Michigan Children's Inpatient Psychiatric Hospital.
-      </p>
-
-      <hr size="4em">
+        <hr align="center" size="2">
 
 
-      <p style="font-size:1.3vh">If you'd like to learn more about crane club, feel free to click the links below!
+        <div style="height:6.5vh; width:100%;"></div>
 
-      <p align="center" style="font-size:2vh">
-          <a href="cranecult.cc"><img src="assets/Main Website Buttons/home.gif" style="width:5vh" alt="Home" border="0"></a>
+        <h1 style="color: white; font-size: 3.8vh"> <em> Welcome to Crane Club! </em></h1>
+
+        <div style="height:1vh; width:100%"></div>
+
+        <marquee behavior="alternative">
+          <font size="2vh" color="aqua">
+            <b>Student Center Room 009</b>
+          </font>
+          <b>
+            <font size="3vh" color="lightgreen"> Fridays 5-7 PM</font>
+            <font size="2vh" color="aqua"> !!</font>
+          </b>
+        </marquee>
+        <div style="height:2vh; width:100%"></div>
+
+        <h2 style="color: white">
+          <javablink style="visibility: hidden;">
+            ~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~
+          </javablink>
+        </h2>
+
+        <div style="height:2vh; width:100%"></div>
+
+        <hr size="4em">
+
+        <p style="font-size:1.5vh; padding-left:1vh;">
+          We are a student organization currently operating at Wayne State University that folds paper boxes and
+          cranes to donate to the University of Michigan Children's Inpatient Psychiatric Hospital.
+        </p>
+
+        <hr size="4em">
+
+
+        <p style="font-size:1.5vh">If you'd like to learn more about crane club, feel free to click the links below!
+
+        <p align="center" style="font-size:2vh">
+          <a href="cranecult.cc"><img src="assets/Main Website Buttons/home.gif" style="width:5vh" alt="Home"
+              border="0"></a>
 
           <a href="https://www.instagram.com/wsucraneclub" target="_blank"><img style="width:5vh"
               src="assets/Main Website Buttons/insta.gif" alt="Insta" border="0"></a>
@@ -97,105 +88,136 @@
           <a href="mailto:wsucraneclub@gmail.com?subject=WSG GANG&body=LETS GET THIS BREAD"><img style="width:5vh"
               src="assets/Main Website Buttons/email.gif" alt="Email" border="0"></a>
 
-          <a href="https://forms.gle/yYKudwcyRUbBTah4A"><img style="width:5vh" src="assets/Main Website Buttons/register.gif"
-              border="0"></a>
-      </p>
+          <a href="https://forms.gle/yYKudwcyRUbBTah4A"><img style="width:5vh"
+              src="assets/Main Website Buttons/register.gif" border="0"></a>
+        </p>
 
+        <hr size="4em">
+        <div style="font-size: 1.5vh">
+          <p style="font-size:1.5vh">Below is our donation progress. If you'd like to see the full list of our partnered
+            organizations and
+            accomplishments, please navigate to the press page.</p>
 
-
-
-      <div>
-        <hr size="4" width="100%">
-        <h2>
-          <hr align="center" width="70%">
-          <hr align="center" width="30%">
-          <hr align="center" width="12%">
-          <hr align="center" width="5%">
-          <hr align="center" width="1%">
-
-        </h2>
-      </div>
-
-
-
-
-      <div>
-
-        <h2 style="color:white; font-size: 3vh;">Check out our playlist on Spotify!</h2>
-
-        <a href="https://open.spotify.com/playlist/0ZtXHq2Rn9cqfbdhzbQMYu?si=23c9ef972cd54bab" target="_blank"
-          alt="Crane Cult" title="Crane Cult">
-          <img src="assets/Images/diskGif.gif" width="20%">
-        </a>
-
-      </div>
-
-      <br>
-
-      <hr size="4" width="70%">
-
-      <div>
-        <br>
-        <h2 style="color:white; font-size:3vh">Sign our guestbook!</h2>
-        <h3 style="color:white; font-size:1.5vh">Sign your name, leave a note, even link your own club, be nice.</h3>
-
-
-        <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-35919-bb" target="_blank"><img alt="Guestbook" border="0"
-            src="http://extras3.smartgb.com/b/gb_80x40.gif" height="70vh"></a>
-        <br>
-
-      </div>
-      <br>
-      <br>
-
-      <hr size="4" width="70%">
-      <br>
-      <br>
-
-      <div>
-
-        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-          <tbody>
+          <table border="1" style="color:blue;color:white; font-size:1.25vh">
+            <tr style="color:white;">
+              <th>Donation Type</th>
+              <th>Number</th>
+              <th>Location</th>
+            </tr>
             <tr>
-              <td align="center"><a href="https://www.moonconnection.com" target="mc_moon_ph"><img
-                    src="https://www.moonmodule.com/cs/dm/hn.gif" width="250vh" border="0" alt=""></a>
-                <div style="position:relative;width:100%;">
-                  <a
-                      href="https://www.moonconnection.com/moon_cycle.phtml" target="mc_moon_ph">
+              <td>Cranes in Boxes</td>
+              <td>170</td>
+              <td>CS Mott's Childrens Inpatient Psychiatric Hospital</td>
+            </tr>
+            <tr>
+              <td>Cranes</td>
+              <td>260</td>
+              <td>Ann Arbor Meals on Wheels</td>
+            </tr>
+            <tr>
+              <td>Cranes</td>
+              <td>50</td>
+              <td>Turner Senior Center</td>
+            </tr>
+            <tr>
+              <td>Cranes</td>
+              <td>520</td>
+              <td>DMC Children's Hospital</td>
+            </tr>
+          </table><br>
+        </div>
+
+
+        <div>
+          <hr size="4" width="100%">
+          <h2>
+            <hr align="center" width="70%">
+            <hr align="center" width="30%">
+            <hr align="center" width="12%">
+            <hr align="center" width="5%">
+            <hr align="center" width="1%">
+
+          </h2>
+        </div>
+
+
+
+
+        <div>
+
+          <h2 style="color:white; font-size: 2.5vh;">Check out our playlist on Spotify!</h2>
+
+          <a href="https://open.spotify.com/playlist/0ZtXHq2Rn9cqfbdhzbQMYu?si=23c9ef972cd54bab" target="_blank"
+            alt="Crane Cult" title="Crane Cult">
+            <img src="assets/Images/diskGif.gif" width="100vh">
+          </a>
+
+        </div>
+
+        <br>
+
+        <hr size="4" width="70%">
+
+        <div>
+          <br>
+          <h2 style="color:white; font-size:2.5vh">Sign our guestbook!</h2>
+          <h3 style="color:white; font-size:1.5vh">Sign your name, leave a note, even link your own club, be nice.</h3>
+
+
+          <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-35919-bb" target="_blank"><img alt="Guestbook" border="0"
+              src="http://extras3.smartgb.com/b/gb_80x40.gif" height="70vh"></a>
+          <br>
+
+        </div>
+        <br>
+        <br>
+
+        <hr size="4" width="70%">
+        <br>
+        <br>
+
+        <div>
+
+          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tbody>
+              <tr>
+                <td align="center"><a href="https://www.moonconnection.com" target="mc_moon_ph"><img
+                      src="https://www.moonmodule.com/cs/dm/hn.gif" width="250vh" border="0" alt=""></a>
+                  <div style="position:relative;width:100%;">
+                    <a href="https://www.moonconnection.com/moon_cycle.phtml" target="mc_moon_ph">
                       <font color="#7F7F7F" size="1" face="arial,helvetica,sans-serif"><span
                           style="color:#7F7F7F;font-family:arial,helvetica,sans-serif;font-size:10px;"></span></font>
-                      </a>
-                </div>
-              </td>
+                    </a>
+                  </div>
+                </td>
 
-            </tr>
-          </tbody>
-        </table>
+              </tr>
+            </tbody>
+          </table>
 
+        </div>
+
+        <div align="center">
+
+          <hr size="4" width="100%">
+          <a href="" target="_blank"><img src="assets/Buttons/anybrowser2.gif" style="width:10%; max-width:100px;"></a>
+          <a href="" target="_blank"><img src="assets/Buttons/arizona.gif" style="width:10%; max-width:100px;"></a>
+          <a href="" target="_blank"><img src="assets/Buttons/catscape.gif" style="width:10%; max-width:100px;"></a>
+          <a href="" target="_blank"><img src="assets/Buttons/email.gif" style="width:10%; max-width:100px;"></a><br>
+          <a href="" target="_blank"><img src="assets/Buttons/got_html.gif" style="width:10%; max-width:100px;"></a>
+          <a href="" target="_blank"><img src="assets/Buttons/imac.gif" style="width:10%; max-width:100px;"></a>
+          <a href="" target="_blank"><img src="assets/Buttons/handcode.jpg" style="width:10%; max-width:100px;"></a>
+          <a href="" target="_blank"><img src="assets/Buttons/south-beach.gif" style="width:10%; max-width:100px;"></a>
+          <a href="" target="_blank"><img src="assets/Buttons/sklsx.gif" style="width:10%; max-width:100px;"></a>
+          <a href="" target="_blank"><img src="assets/Buttons/neocities-pink.gif"
+              style="width:10%; max-width:100px;"></a><br>
+          <a href="" target="_blank"><img src="assets/Buttons/noclick.gif" style="width:10%; max-width:100px;"></a>
+          <a href="" target="_blank"><img src="assets/Buttons/nocodeandrun.gif" style="width:10%; max-width:100px;"></a>
+          <a href="" target="_blank"><img src="assets/Buttons/ns_logo.gif" style="width:10%; max-width:100px;"></a>
+          <a href="" target="_blank"><img src="assets/Buttons/phonechump.gif" style="width:10%; max-width:100px;"></a>
+
+        </div>
       </div>
-
-
-    </div>
-
-
-    <div>
-
-      <hr size="4" width="100%">
-      <a href="" target="_blank"><img src="assets/Buttons/anybrowser2.gif" style="width:10%"></a>
-      <a href="" target="_blank"><img src="assets/Buttons/arizona.gif" style="width:10%"></a>
-      <a href="" target="_blank"><img src="assets/Buttons/catscape.gif" style="width:10%"></a>
-      <a href="" target="_blank"><img src="assets/Buttons/email.gif" style="width:10%"></a><br>
-      <a href="" target="_blank"><img src="assets/Buttons/got_html.gif" style="width:10%"></a>
-      <a href="" target="_blank"><img src="assets/Buttons/imac.gif" style="width:10%"></a>
-      <a href="" target="_blank"><img src="assets/Buttons/handcode.jpg" style="width:10%"></a>
-      <a href="" target="_blank"><img src="assets/Buttons/south-beach.gif" style="width:10%"></a>
-      <a href="" target="_blank"><img src="assets/Buttons/sklsx.gif" style="width:10%"></a>
-      <a href="" target="_blank"><img src="assets/Buttons/neocities-pink.gif" style="width:10%"></a><br>
-      <a href="" target="_blank"><img src="assets/Buttons/noclick.gif" style="width:10%"></a>
-      <a href="" target="_blank"><img src="assets/Buttons/nocodeandrun.gif" style="width:10%"></a>
-      <a href="" target="_blank"><img src="assets/Buttons/ns_logo.gif" style="width:10%"></a>
-      <a href="" target="_blank"><img src="assets/Buttons/phonechump.gif" style="width:10%"></a>
-
     </div>
   </div>
 

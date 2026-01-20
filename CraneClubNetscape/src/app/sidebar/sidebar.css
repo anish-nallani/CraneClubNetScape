@@ -6,7 +6,7 @@ html:before {
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 50%);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
   z-index: 2;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
@@ -58,15 +58,8 @@ html:before {
 
 body {
   background-image: url("../../assets/Backgrounds/Starry_Background.gif");
-  background-color: black;
-  font-family: "eb-garamond"
-}
-
-body {
-  background-image: url("../../assets/Backgrounds/Starry_Background.gif");
-  font-family: "eb-garamond";
+  font-family: "eb-garamond" !important;
   height:100vh;
-  width:100vw;
 }
 
 .container {
@@ -86,7 +79,7 @@ h1 {
 
 p {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 2vh;
   color: #fff;
   /* Set paragraph text color to white */
 }
