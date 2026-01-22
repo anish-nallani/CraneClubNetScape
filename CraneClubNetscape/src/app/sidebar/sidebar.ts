@@ -1,12 +1,13 @@
 import { OnInit, ViewEncapsulation } from '@angular/core';
 import { AfterViewInit } from '@angular/core';
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import Webamp from 'webamp';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
   encapsulation: ViewEncapsulation.None

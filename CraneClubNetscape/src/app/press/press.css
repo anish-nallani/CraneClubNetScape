@@ -1,0 +1,38 @@
+body {
+  margin: 0px !important;
+}
+
+#mainPageThing {
+  background-image: url(https://images.hdqwalls.com/download/windows-xp-bliss-4k-lu-1920x1080.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#paragraph {
+  position: relative;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+}
+
+#bar {
+  height:4vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#start {
+  position:absolute;
+  left: 3px;
+  bottom: -1px;
+}
+
+p {
+  margin-top:0px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size:3vh !important;
+  color: #222 !important;
+  line-height:4vh !important;
+}
