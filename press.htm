@@ -1,72 +1,734 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Press</title>
-	
-<style type="text/css">
-	body {
-		background-image: url(https://images.hdqwalls.com/download/windows-xp-bliss-4k-lu-1920x1080.jpg);
-		background-repeat:no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        background-size: cover;	
-        
-	}
-    #paragraph {
-        position: relative;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-size: 25px;
-    }
-    #bar {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-    #start{
-        position: absolute;
-        left: 0px;
-        bottom: -3px;
-        
-    }
-    #window{
+    <meta charset="utf-8">
+    <title>Press</title>
 
-    }
-	</style>
-	
-    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-image: url("https://www.cameronsworld.net/img/content/5/bg.jpg");
+            background-repeat: repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 22px;
+            padding: 30px 14px;
+            color: white;
+        }
+
+        .center-box {
+            width: min(520px, 88vw);
+            background: rgba(0,0,0,0.70);
+            color: #fff;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 18px;
+            line-height: 1.55;
+            padding: 16px 18px;
+            border-style: outset;
+            border-width: 5px;
+            border-color: #c6c6c6 /* top */
+            #7a7a7a /* right */
+            #7a7a7a /* bottom */
+            #c6c6c6; /* left */
+
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            align-content: center;
+            align-items: center;
+            color: white;
+        }
+
+            .center-box h2 {
+                margin: 0 0 10px 0;
+                font-size: 20px;
+                letter-spacing: 0.5px;
+                text-align: center;
+            }
+
+        .scroll-area {
+            max-height: 210px;
+            overflow: auto;
+            padding-right: 8px;
+        }
+
+        .partners {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+            .partners li {
+                margin: 6px 0;
+            }
+
+        .counter {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 18px;
+        }
+
+        .subtitle {
+            display: block;
+            margin-top: 6px;
+            font-size: 14px;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+
+        .sideNav a {
+            padding-bottom: 8px;
+        }
+
+        #now span, #dyn span {
+            text-decoration: wavy underline 1px rgb(57, 156, 255);
+        }
+
+            #now span:hover {
+                color: blue;
+            }
+
+        #influences img:hover {
+            transform: scale(1.5);
+        }
+
+        h1, h2 {
+            font-weight: 400
+        }
+
+        .sideNav a {
+            display: block;
+        }
+
+        #scrollable {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: 99vh;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+
+        .row {
+            display: flex;
+            display: inline-flex;
+            gap: 100px;
+            height: 99vh;
+        }
+
+        #past .row {
+            height: 100vh;
+        }
+
+        #scrollable .row {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            height: 95vh;
+            align-items: flex-end;
+        }
+
+        .row {
+            align-items: center;
+        }
+
+        .col {
+            width: 225px;
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+        }
+
+            .col h1, p {
+                text-align: justify;
+                line-height: normal;
+            }
+        /* dyn */
+        #tight {
+            gap: 1rem;
+        }
+
+        #dyn {
+            display: flex;
+            width: 311px;
+            height: 90vh;
+            padding: 16px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            border: solid 1px black;
+        }
+
+        #center {
+            width: 100%;
+            height: 100vh; /* 100% of the viewport height */
+            background-size: cover; /* Cover the entire container with the background image */
+            background-position: center; /* Center the background image within the container */
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+            #center img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensure the image covers the entire space without stretching */
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+
+        #influences img {
+            width: 150px;
+            height: auto;
+        }
+
+        #influences .col {
+            gap: 4rem;
+            /* justify-content: center; */
+        }
+
+        #influences .row {
+            align-items: center;
+        }
+
+        #influences .sup {
+            gap: 4px;
+        }
+
+        #end {
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 8px;
+            flex: 1 0 0;
+            align-self: stretch;
+        }
+
+        .colsmall {
+            width: 128px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-self: stretch;
+            height: 95vh;
+        }
+
+        #values .image {
+            flex: 1 0 0;
+            align-self: stretch;
+            background-image: url('./image/about/values.png');
+        }
+
+        #line1 {
+            display: flex;
+            width: 109px;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1 0 0;
+            border-left: 1px solid var(--dark, #000);
+        }
+
+        #past {
+            display: flex;
+            width: 750px;
+            height: 95vh;
+            align-items: flex-end;
+            gap: 16px;
+            position: relative;
+        }
+
+        #line2 {
+            display: flex;
+            height: 20px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            flex: 1 0 0;
+            border-top: 1px solid var(--dark, #000);
+        }
+
+        .line3 {
+            position: absolute;
+            top: 45px;
+            left: 50px;
+        }
+
+        sup {
+            color: gray;
+            font-style: italic;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: white;
+        }
+
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                color: white;
+                text-align: left;
+                border-radius: 5px;
+                padding: 5px;
+                position: absolute;
+                z-index: 1;
+                bottom: 10%;
+                left: 50%;
+                margin-left: -60px;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+        .tooltiptext p {
+            text-align: justify;
+        }
+
+        /* Show the tooltip when hovering over the tooltip container */
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip:hover {
+            color: lightseagreen;
+        }
+
+        .imgcon {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Hidden image by default */
+        .imgtip {
+            display: none;
+            position: absolute;
+            bottom: 100%; /* Position the image just below the text */
+            left: 0;
+            opacity: 50%;
+        }
+
+        .imgtip2 {
+            display: none;
+            position: absolute;
+            top: 100%; /* Position the image just below the text */
+            left: 0;
+            opacity: 50%;
+        }
+
+        .imgcon:hover .imgtip {
+            display: block;
+        }
+
+        .imgcon:hover .imgtip2 {
+            display: block;
+        }
+
+        .responsive {
+            display: none;
+        }
+
+        #jump a {
+            background-color: rgb(0,0,0,0); /* Green */
+            border: rgb(0,0,0,0) 1px solid;
+            color: rgb(34, 125, 216) !important;
+            ;
+            font-weight: 200;
+            padding: 4px 0px;
+            text-align: left;
+            text-decoration: none !important;
+            ;
+            margin: 4px 0px;
+            cursor: pointer;
+            display: block;
+            font-size: 1.3rem;
+            font-family: "Arial Narrow", sans-serif;
+        }
+
+
+        @media only screen and (max-width: 40em) {
+            .responsive {
+                display: contents;
+            }
+
+            #scrollable .row {
+                margin-top: 0rem;
+                margin-bottom: 0rem;
+                align-items: flex-start;
+            }
+
+            #line1 {
+                width: 20px;
+            }
+
+            #past .colsmall {
+                height: 20vh;
+            }
+
+            .line3 {
+                display: none;
+            }
+
+            #scrollable .col {
+                height: auto;
+            }
+
+            #scrollable .row {
+                height: auto;
+            }
+
+            #scrollable {
+                overflow-x: auto;
+            }
+
+            #dyn {
+                display: none;
+            }
+
+            #jump {
+                display: none;
+            }
+
+            .row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .sup .row {
+                flex-direction: row;
+            }
+        }
+
+        .question:hover {
+            cursor: help;
+        }
+
+        .sideNav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            max-width: 160px;
+            max-height: 100vh;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-shrink: 0;
+            align-self: stretch;
+            padding: 16px 24px 16px 16px;
+        }
+
+        a:hover, a:visited:hover {
+            color: blue;
+        }
+
+        a {
+            text-decoration-color: rgb(57, 156, 255);
+            text-decoration-style: wavy;
+        }
+
+            a:visited {
+                color: black;
+                text-decoration-color: rgb(57, 156, 255);
+                text-decoration-style: wavy;
+            }
+
+        #addendum {
+            font-weight: 400;
+            display: none;
+        }
+
+        @media only screen and (max-width: 40em) {
+            #addendum {
+                display: block;
+            }
+
+            .sideNav {
+                max-width: 40em;
+                position: static;
+                padding: 8px;
+            }
+
+            .card p {
+                font-size: .8rem;
+            }
+        }
+
+        @media print {
+            #simplify-jobs-container {
+                display: none;
+            }
+        }
+
+        .bottom-strip {
+            width: 100%;
+            height: 96px;
+            transform: translateY(70px);
+            background-image: url("https://www.cameronsworld.net/img/content/21/32.gif");
+            background-repeat: repeat-x;
+            background-position: bottom;
+        }
+
+        /* 98.css scrollbar  */
+        ::-webkit-scrollbar {
+            width: 16px;
+        }
+
+            ::-webkit-scrollbar:horizontal {
+                height: 17px;
+            }
+
+        ::-webkit-scrollbar-corner {
+            background: #dfdfdf;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='2' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 0H0v1h1v1h1V1H1V0z' fill='silver'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 0H1v1H0v1h1V1h1V0z' fill='%23fff'/%3E%3C/svg%3E");
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #dfdfdf;
+            box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+        }
+
+        ::-webkit-scrollbar-button:horizontal:end:increment,
+        ::-webkit-scrollbar-button:horizontal:start:decrement,
+        ::-webkit-scrollbar-button:vertical:end:increment,
+        ::-webkit-scrollbar-button:vertical:start:decrement {
+            display: block;
+        }
+
+        ::-webkit-scrollbar-button:vertical:start {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 6H7v1H6v1H5v1H4v1h7V9h-1V8H9V7H8V6z' fill='%23000'/%3E%3C/svg%3E");
+            height: 17px;
+        }
+
+        ::-webkit-scrollbar-button:vertical:end {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 6H4v1h1v1h1v1h1v1h1V9h1V8h1V7h1V6z' fill='%23000'/%3E%3C/svg%3E");
+            height: 17px;
+        }
+    </style>
+
 
 </head>
 
-
-<div id="paragraph">
-  <p style:="font-family:'Helvetica Neue Light'"> 1/16/24 - Crane Club created at Wayne State University. <br>
-    4/3/24 - 70 Cranes in boxes donated to CS Mott’s Inpatient Psychiatric Children’s Hospital. <br>
-    4/16/24 - Crane Club is online. <br>
-    5/16/24 - Crane Club summer meetings take place every Thursday. <br>
-    6/25/24 - Crane Club’s name is reserved. <br>
-    6/28/24 - 100 Cranes in boxes donated to CS Mott’s Inpatient Psychiatric Children’s Hospital. <br>
-    6/28/24 - Partnered with the Canton Public Library to host a public meeting. <br>
-    7/26/24 - Crane Club officially named a non-profit in the state of Michigan. <br>
-    8/3/24 - Partnered with 88.1, the Park, a local radio station to air a news story on Crane Club. <br>
-    8/6/24 - 260 Cranes donated to Ann Arbor Meals on Wheels. <br>
-    8/12/24 - Partnered with the Gifts of Arts program to create origami kits for adult inpatients. <br>
-    8/15/24 - Crane Club officially partnered with CupsNChai, a Canton cafe, to host public meetings and promote mental health awareness in the desi community. <br>
-	8/20/24 - 50 cranes donated to Turner Senior Center</p>
-  <p style:="font-family:'Helvetica Neue Light'">&nbsp;</p>
-</div>
-
-
-<div id="bar" class="title-bar">
-    <div class="title-bar-text"></div>
-    <div class="title-bar-controls">
+<body>
+    <img src="https://www.cameronsworld.net/img/content/3/21.png" />
+    <div class="center-box" id="timeline-box">
+        <img src="https://blob.gifcities.org/gifcities/LDGLKWMSISK2E2QMMCPHLWB26SQS4AQF.gif" />
+        <h2>Crane Club Timeline</h2>
+        <div class="scroll-area">
+            <em>
+                1/16/24 - Crane Club created at Wayne State University<br>
+                4/3/24 - 70 Cranes in boxes donated to CS Mott’s Inpatient Psychiatric Children’s Hospital<br>
+                4/16/24 - www.craneclub.cc is created<br>
+                5/16/24 - Crane Club summer meetings take place every Thursday<br>
+                6/25/24 - Crane Club’s name is reserved<br>
+                6/28/24 - 100 Cranes in boxes donated to CS Mott’s Inpatient Psychiatric Children’s Hospital<br>
+                6/28/24 - Partnered with the Canton Public Library to host a public meeting<br>
+                7/26/24 - Crane Club officially named a non-profit in the state of Michigan<br>
+                8/3/24 - Partnered with 88.1, the Park, a local radio station to air a news story on Crane Club<br>
+                8/6/24 - 260 Cranes donated to Ann Arbor Meals on Wheels<br>
+                8/12/24 - Partnered with the Gifts of Arts program to create origami kits for adult inpatients<br>
+                8/15/24 - Partnered with CupsNChai to promote mental health awareness in the desi community<br>
+                9/02/24 - 620 cranes donated to the Children’s Hospital of Michigan<br>
+                9/14/24 - 50 Cranes donated to Turner Senior Resource Center<br>
+                9/29/24 - Partnered with the Canton Hindu Temple to promote mental health awareness<br>
+                10/6/24 - Featured on NPR WDET 101.9 FM for donating 1000 cranes to Michigan hospitals<br>
+                10/9/24 - Partnered with University of Michigan’s United Asian American Organizations<br>
+                10/14/24 - 50 cranes donated to Silver Club Memory Programs<br>
+                10/25/24 - 250 cranes donated to the Gifts of Arts program<br>
+                11/14/24 - Collaborative art build with UAAO and TAHRIR Coalition<br>
+                11/14/24 - 500 cranes donated to the Gifts of Arts program<br>
+                11/15/24 - Crane-folding workshops hosted with Children’s Hospital of Michigan<br>
+                12/1/24 - Month-long 2000 paper crane exhibit at Michigan Medicine<br>
+                12/14/24 - 3-hour crane workshops at Med Inn, Family Center, and Lecture Hall<br>
+                2/27/25 - 2-month crane art exhibit with Children’s Hospital of Detroit volunteer services<br>
+                5/12/25 - Crane folding workshop with patients via Gifts of Arts<br>
+                6/13/25 - 500 cranes donated + 2-hour workshop hosted with Gifts of Arts<br>
+                7/27/25 - Crane workshop and dating violence seminar with CHASS Center youth group
+            </em>
+        </div>
     </div>
-  </div>
-<div id="start">
-    <img src="Buttons/StartIcon.png">
+
+    <div class="center-box" id="partners-box">
+        <h2>Partnered Organizations</h2>
+        <ul class="partners">
+            <li>CS Mott Children’s Hospital (Inpatient Psychiatric Unit)</li>
+            <li>Canton Public Library</li>
+            <li>88.1 The Park (radio)</li>
+            <li>Ann Arbor Meals on Wheels</li>
+            <li>Gifts of Arts (Michigan Medicine)</li>
+            <li>CupsNChai (Canton cafe)</li>
+            <li>Children’s Hospital of Michigan</li>
+            <li>Turner Senior Resource Center</li>
+            <li>Canton Hindu Temple</li>
+            <li>University of Michigan United Asian American Organizations</li>
+            <li>Silver Club Memory Programs</li>
+            <li>TAHRIR Coalition</li>
+            <li>Children’s Hospital of Detroit Volunteer Services</li>
+            <li>CHASS Center (Detroit) Youth Group Summer Program</li>
+            <li>NPR WDET 101.9 FM (feature)</li>
+        </ul>
+    </div>
+
+    <div class="center-box counter" id="counter-box">
+        Current Crane Counter: 5120
+        <span class="subtitle">Updated through 7/27/25</span>
+    </div>
+
+    <img src="https://www.cameronsworld.net/img/content/3/21.png" />
+
+    <center>
+        <font color="#AF0000">
+            <a href="https://web.archive.org/web/20091020174030/http://www.geocities.com/SoHo/4912/alist.html">
+                <map name="map3">
+                    <area shape="RECT" coords="1,1,333,67" href="https://web.archive.org/web/20091020174030/http://www.geocities.com/SoHo/4912/alist.html">
+                    <area shape="RECT" coords="1,0,333,69" nohref="">
+                </map><img usemap="#map3" src="https://web.archive.org/web/20091020174030im_/http://geocities.com/SoHo/4746/kptban.jpg" width="334" height="70" border="0">
+            </a>
+        </font>
+    </center>
+
+    <h5>
+        <center>
+            <font color="#AF0000">This page hosted by</font><font color="#AF0000"><a href="https://web.archive.org/web/20091020174030/http://www.geocities.com/"><img src="https://web.archive.org/web/20091026161630im_/http://geocities.com/SoHo/4746/gc_icon.gif" width="88" height="31"></a></font><font color="#AF0000">Get your own </font><font color="#AF0000">
+                <a href="https://web.archive.org/web/20091020174030/http://www.geocities.com/">
+                    Free Home
+                    Page
+                </a>
+            </font>
+        </center>
+    </h5>
+    <h3>
+        <center>
+            <font color="#AF0000">xxxxxxxxxx</font>
+            <font color="#AF0000">
+                <img src="https://web.archive.org/web/20091026144653im_/http://geocities.com/SoHo/4746/mcspin2.gif" width="64" height="80">
+            </font>
+            xxxxxxx
+            <img src="https://blob.gifcities.org/gifcities/2GKKPE7NGILZAOSBCJAJCDU6YYRHRPSU.gif" />
+            <font color="#00AF00">Visitors since 7/17/1997</font>
+        </center>
+    </h3>
+</body>
+<img src="https://www.cameronsworld.net/img/content/3/15.png">
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><h1><em>MY GOD, <br />LOOK AT THE STARS! </em></h1></center>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="scrollable">
+    <div class="row" id="dreams">
+        <div class="col" id="end">
+            <pre> <br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+              _
+            /(_))
+          _/   /
+         //   /
+        //   /
+        /\__/
+        \O_/=-.
+    _  / || \  ^o
+    \\/ ()_) \.
+     ^^ &lt;__&gt; \()
+       //||\\
+      //_||_\\  
+     // \||/ \\
+    //   ||   \\
+   \/    |/    \/
+   /     |      \
+  /      |       \
+         |
+          </pre>
+        </div>
+
+        <div class="col">
+            <pre class="tooltip">            .
+            ;
+        - --+- -
+            !
+            .
+            <div class="tooltiptext">
+              what do you know about a birds eye view</div>
+                 </pre>
+
+
+            <pre class="tooltip">            
+                                            
+                    ....                    
+              =#%++**##*##%%#=              
+           +%@@%#%##+:+%%##+-:-=-           
+         %##%%%**+=-:-*:.-..:--.:=-         
+       *%##*=-:.:.:++****:....-.:*#-.       
+      %*=-*=%#+-:*@.#=@::-.+==-@%.::::      
+     +=+++*#=-*#+*@@%@-=%*++-..-*=*--::     
+    *%+:-::*+%*#*@##%+@##=:...::...##::.    
+    *+*-:-:::@@*#@@@++-:=*=*.....-:.=%=:    
+   *+*%@==:.:++##**-::+.:...-.-......=:*    
+   *==#-+%+%@*+=*+-:-:....-...:..:...:...   
+   #-:+-:.....+%%**:-=.........:#.+......   
+   +++=--@@@%=%#@@@@*@*+*.....=...=....:.   
+    **@:=%+*-..===-%@@@@@@-..*-%.:-+..-.    
+    %@@-:@@@=.:.:@@*@@@@#+.:+=%@:#+%=...    
+     +@@***++@@#@@@@@@*==-:-:=@*-@@%*=.     
+      #@@*@#*@@@@.@@%%-+#=-%=:...-*:..      
+       ==##@%+%@@%@@*#@@%%#*+=*%%*--.       
+         #%%@%@@@@@@@@@@@@@#@@@%*+-         
+           +%@@@@@@@@@@@@@@@@@%*-           
+              -%@@@@@@@@@@%#*=              
+                    ..:..                   
+                                                                         
+                                                             
+            <div class="tooltiptext">
+      sometimes i think about saving the world</div>
+         </pre>
+
+
+            <pre class="tooltip">      .
+     -+- 
+      !
+            <div class="tooltiptext">
+        i want to help as many people as i can</div>
+                       </pre>
+        </div>
+        <div class="col">
+            <pre class="tooltip">   .
+  -+- 
+   !
+            <div class="tooltiptext">
+   to fold<br>
+  is to feel</div>
+                               </pre>
+
+        </div>
+    </div>
+</div>
+<div>
+    <img src="https://blob.gifcities.org/gifcities/FLDT6WJIJETWEAI5LGS66SRQQQ77MIG7.gif" />
 
 </div>
 
-</body>
+
+<script src="abscript.js"></script>
 </html>

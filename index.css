@@ -1,0 +1,197 @@
+html:before {
+    content: " ";
+    display: block; position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 50%);
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+.main-logo {
+    position: absolute center;
+    width: 200px;
+    scale: 180%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.border-style {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+}
+
+.border-width {
+    border-top-width: medium;
+    border-width: 0;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+}
+
+.border-collapse {
+    border-collapse: collapse;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+}
+
+.text-decoration {
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-color: currentcolor;
+    text-decoration-thickness: auto;
+}
+
+* {
+    scrollbar-color: #ffffff #000000;
+    scrollbar-width: auto;
+    cursor: url("img/cursor.gif"), url("img/cursor.gif"), default;
+    a:hover, button:hover, input:hover {cursor: url("img/cursor1.gif"), default; }
+}
+
+@font-face {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: #000000;
+    background: #ffffff;
+}
+    
+::selection {
+    color: #000000;
+    background: #ffffff;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif
+}
+
+@media print {
+    #simplifyJobsContainer {
+        display: none;
+    }
+}
+
+:host {
+    all: initial;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(203, 213, 225, 1) transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(203, 213, 225, 1);
+    border-radius: 3px;
+    border: 0;
+}
+
+html:before {
+    content: " ";
+    display: block; position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 50%);
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+.repeating-image-container {
+    background-image: url("Images/Under_Construction1.gif"); /* Replace with your image path */
+    background-repeat: repeat-x;  /* Repeat horizontally */
+    height: 30px; /* Adjust as needed */
+}
+
+body {background-color: black; font-family: "eb-garamond"}
+
+body {
+          background-image: url("Backgrounds/Starry_Background.gif");
+          font-family: "eb-garamond"
+        }
+        .container {
+          max-width: 1000px;
+          margin: 0 auto;
+          padding: 10px;
+          background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background to the content container */
+        }
+        h1 {
+          font-size: 32px;
+          text-align: center;
+          color: #fff; /* Set heading text color to white */
+        }
+        p {
+          font-size: 18px;
+          line-height: 1.5;
+          color: #fff; /* Set paragraph text color to white */
+        }
+        .link {
+          color: #00f;
+          text-decoration: underline;
+        }
+        .top-gif-1 {
+        }
+        .under-construction {
+          text-align: center;
+          font-size: 24px;
+          color: #ff0000; /* Set text color to red */
+          text-shadow: 2px 2px 4px #000;
+          margin-top: 20px;
+        }
+        .animated-text {
+          animation: blink 1s infinite;
+        }
+        @keyframes blink {
+          0% { opacity: 1; }
+          50% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+
+        @media print {
+    #simplifyJobsContainer {
+      display: none;
+    }
+  }
+
+:host {
+        all: initial;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        font-family: Palanquin, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+      * {
+        font-family: Palanquin, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        scrollbar-width: thin;
+        scrollbar-color: rgba(203, 213, 225, 1) transparent;
+      }
+      *::-webkit-scrollbar {
+        width: 6px;
+      }
+      *::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      *::-webkit-scrollbar-thumb {
+        background-color: rgba(203, 213, 225, 1);
+        border-radius: 3px;
+        border: 0;
+      }
